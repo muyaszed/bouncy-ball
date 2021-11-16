@@ -8,11 +8,13 @@ class App {
   }
 
   public init() {
+    //start animation loop
     this.animationLoop();
   }
 
   private animationLoop() {
-    requestAnimationFrame(this.animationLoop.bind(this));
+    //function responsible making an infinite loop
+    requestAnimationFrame(() => this.animationLoop());
     this.animation.render();
   }
 }
